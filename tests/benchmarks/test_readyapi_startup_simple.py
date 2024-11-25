@@ -22,7 +22,7 @@ except ImportError:
 
 
 @pytest.mark.skipif(not email_validator, reason='email_validator not installed')
-def test_fastapi_startup_perf(benchmark: Callable[[Callable[[], Any]], None]):
+def test_readyapi_startup_perf(benchmark: Callable[[Callable[[], Any]], None]):
     def run() -> None:
         class User(BaseModel):
             id: int
@@ -90,7 +90,7 @@ def test_fastapi_startup_perf(benchmark: Callable[[Callable[[], Any]], None]):
             ReviewGroup,
         ]
 
-        for _ in range(5):  # FastAPI creates a new TypeAdapter for each endpoint
+        for _ in range(5):  # ReadyAPI creates a new TypeAdapter for each endpoint
             for model in data_models:
                 TypeAdapter(model)
 
@@ -98,7 +98,7 @@ def test_fastapi_startup_perf(benchmark: Callable[[Callable[[], Any]], None]):
 
 
 if __name__ == '__main__':
-    # run with `uv run tests/benchmarks/test_fastapi_startup_simple.py`
+    # run with `uv run tests/benchmarks/test_readyapi_startup_simple.py`
     import cProfile
     import sys
     import time
@@ -106,12 +106,12 @@ if __name__ == '__main__':
     print(f'Python version: {sys.version}')
     if sys.argv[-1] == 'cProfile':
         cProfile.run(
-            'test_fastapi_startup_perf(lambda f: f())',
+            'test_readyapi_startup_perf(lambda f: f())',
             sort='tottime',
             filename=Path(__file__).name.strip('.py') + '.cprof',
         )
     else:
         start = time.perf_counter()
-        test_fastapi_startup_perf(lambda f: f())
+        test_readyapi_startup_perf(lambda f: f())
         end = time.perf_counter()
         print(f'Time taken: {end - start:.6f}s')

@@ -1620,7 +1620,7 @@ print(inspect.signature(FooModel))
 #> (*, id: int, name: str = None, description: str = 'Foo', pear: int) -> None
 ```
 
-An accurate signature is useful for introspection purposes and libraries like `FastAPI` or `hypothesis`.
+An accurate signature is useful for introspection purposes and libraries like `ReadyAPI` or `hypothesis`.
 
 The generated signature will also respect custom `__init__` functions:
 

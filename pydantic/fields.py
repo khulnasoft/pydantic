@@ -236,7 +236,7 @@ class FieldInfo(_repr.Representation):
         self.examples = kwargs.pop('examples', None)
         self.exclude = kwargs.pop('exclude', None)
         self.discriminator = kwargs.pop('discriminator', None)
-        # For compatibility with FastAPI<=0.110.0, we preserve the existing value if it is not overridden
+        # For compatibility with ReadyAPI<=0.110.0, we preserve the existing value if it is not overridden
         self.deprecated = kwargs.pop('deprecated', getattr(self, 'deprecated', None))
         self.repr = kwargs.pop('repr', True)
         self.json_schema_extra = kwargs.pop('json_schema_extra', None)

@@ -6,13 +6,13 @@ set -e
 # waiting on a fix for a bug introduced in v72.0.0, see https://github.com/pypa/setuptools/issues/4519
 echo "PIP_CONSTRAINT=setuptools<72.0.0" >> $GITHUB_ENV
 
-cd fastapi
+cd readyapi
 git fetch --tags
 
 pip install -r requirements.txt
-# Install the version of pydantic from the current branch, not the released version used by fastapi
+# Install the version of pydantic from the current branch, not the released version used by readyapi
 pip uninstall -y pydantic
-cd .. && pip install . && cd fastapi
+cd .. && pip install . && cd readyapi
 
 # ./scripts/test.sh accepts arbitrary arguments and passes them to the pytest call.
 # This may be necessary if we make low-consequence changes to pydantic, such as minor changes the details of a JSON

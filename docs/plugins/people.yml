@@ -98,10 +98,10 @@ top_contributors:
   count: 46
   avatarUrl: https://avatars.githubusercontent.com/u/16239342?u=8454ae029661131445080f023e1efccc29166485&v=4
   url: https://github.com/pyup-bot
-- login: tiangolo
+- login: khulnasoft
   count: 22
   avatarUrl: https://avatars.githubusercontent.com/u/1326112?u=740f11212a731f56798f558ceddb0bd07642afa7&v=4
-  url: https://github.com/tiangolo
+  url: https://github.com/khulnasoft
 - login: Bobronium
   count: 19
   avatarUrl: https://avatars.githubusercontent.com/u/36469655?u=f67d8fa6d67d35d2f5ebd5b15e24efeb41036fd3&v=4
@@ -239,10 +239,10 @@ top_reviewers:
   count: 77
   avatarUrl: https://avatars.githubusercontent.com/u/370316?u=eb206070cfe47f242d5fcea2e6c7514f4d0f27f5&v=4
   url: https://github.com/tpdorsey
-- login: tiangolo
+- login: khulnasoft
   count: 44
   avatarUrl: https://avatars.githubusercontent.com/u/1326112?u=740f11212a731f56798f558ceddb0bd07642afa7&v=4
-  url: https://github.com/tiangolo
+  url: https://github.com/khulnasoft
 - login: Bobronium
   count: 27
   avatarUrl: https://avatars.githubusercontent.com/u/36469655?u=f67d8fa6d67d35d2f5ebd5b15e24efeb41036fd3&v=4

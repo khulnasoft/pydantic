@@ -14,7 +14,7 @@
   const el = document.getElementById('logfire-app-type');
   const appTypes = [
     ['/integrations/pydantic/', 'Pydantic validations.'],
-    ['/integrations/fastapi/', 'FastAPI app.'],
+    ['/integrations/readyapi/', 'ReadyAPI app.'],
     ['/integrations/openai/', 'OpenAI integration.'],
     ['/integrations/asyncpg/', 'Postgres queries.'],
     ['/integrations/redis/', 'task queue.'],
@@ -23,7 +23,7 @@
     ['/integrations/logging/', 'std lib logging.'],
     ['/integrations/django/', 'Django app.'],
     ['/integrations/anthropic/', 'Anthropic API calls.'],
-    ['/integrations/fastapi/', 'Flask app.'],
+    ['/integrations/readyapi/', 'Flask app.'],
     ['/integrations/mysql/', 'MySQL queries.'],
     ['/integrations/sqlalchemy/', 'SQLAlchemy queries.'],
     ['/integrations/structlog/', 'Structlog logs.'],

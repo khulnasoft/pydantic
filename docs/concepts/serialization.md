@@ -565,7 +565,7 @@ class OuterModel(BaseModel):
 user = UserLogin(
     name='samuel',
     password='pydantic-pw',
-    friends=[UserLogin(name='sebastian', password='fastapi-pw', friends=[])],
+    friends=[UserLogin(name='khulnasoft', password='readyapi-pw', friends=[])],
 )
 
 print(OuterModel(user=user).model_dump(serialize_as_any=True))  # (1)!
@@ -574,7 +574,7 @@ print(OuterModel(user=user).model_dump(serialize_as_any=True))  # (1)!
     'user': {
         'name': 'samuel',
         'friends': [
-            {'name': 'sebastian', 'friends': [], 'password': 'fastapi-pw'}
+            {'name': 'khulnasoft', 'friends': [], 'password': 'readyapi-pw'}
         ],
         'password': 'pydantic-pw',
     }
@@ -583,7 +583,7 @@ print(OuterModel(user=user).model_dump(serialize_as_any=True))  # (1)!
 
 print(OuterModel(user=user).model_dump(serialize_as_any=False))  # (2)!
 """
-{'user': {'name': 'samuel', 'friends': [{'name': 'sebastian', 'friends': []}]}}
+{'user': {'name': 'samuel', 'friends': [{'name': 'khulnasoft', 'friends': []}]}}
 """
 ```
 

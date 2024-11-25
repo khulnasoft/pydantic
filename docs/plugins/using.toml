@@ -2,7 +2,7 @@
 repo = "huggingface/transformers"
 stars = 107475
 [[libs]]
-repo = "tiangolo/fastapi"
+repo = "khulnasoft/readyapi"
 stars = 60355
 [[libs]]
 repo = "hwchase17/langchain"
@@ -65,7 +65,7 @@ stars = 10884
 repo = "pyodide/pyodide"
 stars = 10245
 [[libs]]
-repo = "tiangolo/sqlmodel"
+repo = "khulnasoft/sqlmodel"
 stars = 10160
 [[libs]]
 repo = "lucidrains/DALLE2-pytorch"

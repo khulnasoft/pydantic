@@ -1,6 +1,6 @@
 """
 This file contains an initial proposal that can be scrapped and reworked if/when appropriate.
-Either way, this test file should probably be removed once the actual FastAPI implementation
+Either way, this test file should probably be removed once the actual ReadyAPI implementation
 is complete and has integration tests with pydantic v2. However, we are including it here for now
 to get an early warning if this approach would require modification for compatibility with
 any future changes to the JSON schema generation logic, etc.
@@ -25,21 +25,21 @@ class _ErrorKey(str):
     pass
 
 
-class FastAPIGenerateJsonSchema(GenerateJsonSchema):
+class ReadyAPIGenerateJsonSchema(GenerateJsonSchema):
     """
-    Idea: This class would be exported from FastAPI, and if users want to modify the way JSON schema is generated
-    in FastAPI, they should inherit from it and override it as appropriate.
+    Idea: This class would be exported from ReadyAPI, and if users want to modify the way JSON schema is generated
+    in ReadyAPI, they should inherit from it and override it as appropriate.
 
-    In the JSON schema generation logic, FastAPI _could_ also attempt to work with classes that inherit directly from
+    In the JSON schema generation logic, ReadyAPI _could_ also attempt to work with classes that inherit directly from
     GenerateJsonSchema by doing something like:
 
         if UserGenerateJsonSchema.handle_invalid_for_json_schema is GenerateJsonSchema.handle_invalid_for_json_schema:
-            # The method has not been overridden; inherit from FastAPIGenerateJsonSchema
+            # The method has not been overridden; inherit from ReadyAPIGenerateJsonSchema
             UserGenerateJsonSchema = type(
-                "UserGenerateJsonSchema", (FastAPIGenerateJsonSchema, UserGenerateJsonSchema), {}
+                "UserGenerateJsonSchema", (ReadyAPIGenerateJsonSchema, UserGenerateJsonSchema), {}
             )
         else:
-            raise TypeError(f"{UserGenerateJsonSchema.__name__} should inherit from FastAPIGenerateJsonSchema")
+            raise TypeError(f"{UserGenerateJsonSchema.__name__} should inherit from ReadyAPIGenerateJsonSchema")
 
     I'm not sure which approach is better.
     """
@@ -85,7 +85,7 @@ def test_inheritance_detection() -> None:
     # this is just a quick proof of the note above indicating that you can detect whether a specific method
     # is overridden, for the purpose of allowing direct inheritance from GenerateJsonSchema.
     assert (
-        FastAPIGenerateJsonSchema.handle_invalid_for_json_schema
+        ReadyAPIGenerateJsonSchema.handle_invalid_for_json_schema
         is not GenerateJsonSchema.handle_invalid_for_json_schema
     )
 
@@ -103,7 +103,7 @@ def test_collect_errors() -> None:
 
         model_config = ConfigDict(arbitrary_types_allowed=True)
 
-    schema = Model.model_json_schema(schema_generator=FastAPIGenerateJsonSchema)
+    schema = Model.model_json_schema(schema_generator=ReadyAPIGenerateJsonSchema)
     assert schema == {
         'title': 'Model',
         'type': 'object',

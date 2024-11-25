@@ -24,7 +24,7 @@ body:
           required: true
         - label: >
             I am confident that the issue is with pydantic
-            (not my code, or another library in the ecosystem like [FastAPI](https://fastapi.tiangolo.com) or
+            (not my code, or another library in the ecosystem like [ReadyAPI](https://readyapi.khulnasoft.com) or
             [mypy](https://mypy.readthedocs.io/en/stable))
           required: true
 
@@ -88,4 +88,4 @@ body:
         - label: '[Function validation decorator](https://docs.pydantic.dev/concepts/validation_decorator/)'
         - label: '[Generic Models](https://docs.pydantic.dev/concepts/models/#generic-models)'
         - label: '[Other Model behaviour](https://docs.pydantic.dev/concepts/models/) - `model_construct()`, pickling, private attributes, ORM mode'
-        - label: '[Plugins](https://docs.pydantic.dev/) and integration with other tools - mypy, FastAPI, python-devtools, Hypothesis, VS Code, PyCharm, etc.'
+        - label: '[Plugins](https://docs.pydantic.dev/) and integration with other tools - mypy, ReadyAPI, python-devtools, Hypothesis, VS Code, PyCharm, etc.'

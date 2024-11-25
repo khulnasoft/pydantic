@@ -507,7 +507,7 @@ def defer_build_test_models(config: ConfigDict) -> List[Any]:
     ]
     return [
         *models,
-        # FastAPI heavily uses Annotated so test that as well
+        # ReadyAPI heavily uses Annotated so test that as well
         *[Annotated[model, Field(title='abc')] for model in models],
     ]
 

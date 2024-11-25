@@ -442,7 +442,7 @@ Model(x=1)
 #### `TypeError` is no longer converted to `ValidationError` in validators
 
 Previously, when raising a `TypeError` within a validator function, that error would be wrapped into a `ValidationError`
-and, in some cases (such as with FastAPI), these errors might be displayed to end users. This led to a variety of
+and, in some cases (such as with ReadyAPI), these errors might be displayed to end users. This led to a variety of
 undesirable behavior &mdash; for example, calling a function with the wrong signature might produce a user-facing
 `ValidationError`.
 

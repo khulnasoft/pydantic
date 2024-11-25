@@ -38,6 +38,6 @@ These are the users that have reviewed the most Pull Requests from others, assis
 The data displayed above is calculated monthly via the Github GraphQL API.
 
 The source code for this script is located [here](https://github.com/pydantic/pydantic/tree/main/.github/actions/people/people.py).
-Many thanks to [Sebastián Ramírez](https://github.com/tiangolo) for the script from which we based this logic.
+Many thanks to [Sebastián Ramírez](https://github.com/khulnasoft) for the script from which we based this logic.
 
 Depending on changing conditions, the thresholds for the different categories of contributors may change in the future.
