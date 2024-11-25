@@ -80,10 +80,10 @@ test-examples: .uv
 	@echo "running examples"
 	@find docs/examples -type f -name '*.py' | xargs -I'{}' sh -c 'uv run python {} >/dev/null 2>&1 || (echo "{} failed")'
 
-.PHONY: test-fastapi  ## Run the FastAPI tests with this version of pydantic
-test-fastapi:
-	git clone https://github.com/tiangolo/fastapi.git --single-branch
-	./tests/test_fastapi.sh
+.PHONY: test-readyapi  ## Run the ReadyAPI tests with this version of pydantic
+test-readyapi:
+	git clone https://github.com/khulnasoft/readyapi.git --single-branch
+	./tests/test_readyapi.sh
 
 .PHONY: test-pydantic-settings  ## Run the pydantic-settings tests with this version of pydantic
 test-pydantic-settings: .uv
@@ -120,7 +120,7 @@ clean:
 	rm -rf site
 	rm -rf docs/_build
 	rm -rf docs/.changelog.md docs/.version.md docs/.tmp_schema_mappings.html
-	rm -rf fastapi/test.db
+	rm -rf readyapi/test.db
 	rm -rf coverage.xml
 
 .PHONY: docs  ## Generate the docs

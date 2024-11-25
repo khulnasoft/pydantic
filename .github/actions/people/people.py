@@ -1,7 +1,7 @@
 """Use the github API to get lists of people who have contributed in various ways to Pydantic.
 
-This logic is inspired by that of @tiangolo's
-[FastAPI people script](https://github.com/tiangolo/fastapi/blob/master/.github/actions/people/app/main.py).
+This logic is inspired by that of @khulnasoft's
+[ReadyAPI people script](https://github.com/khulnasoft/readyapi/blob/master/.github/actions/people/app/main.py).
 """
 
 import logging

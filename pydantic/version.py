@@ -31,7 +31,7 @@ def version_info() -> str:
     # get data about packages that are closely related to pydantic, use pydantic or often conflict with pydantic
     package_names = {
         'email-validator',
-        'fastapi',
+        'readyapi',
         'mypy',
         'pydantic-extra-types',
         'pydantic-settings',

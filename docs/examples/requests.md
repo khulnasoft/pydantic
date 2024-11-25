@@ -1,5 +1,5 @@
 Pydantic models are a great way to validating and serializing data for requests and responses.
-Pydantic is instrumental in many web frameworks and libraries, such as FastAPI, Django, Flask, and HTTPX.
+Pydantic is instrumental in many web frameworks and libraries, such as ReadyAPI, Django, Flask, and HTTPX.
 
 ## `httpx` requests
 
@@ -71,4 +71,4 @@ pprint([u.name for u in users])
 
 1. Note, we're querying the `/users/` endpoint here to get a list of users.
 
-<!-- TODO: httpx, flask, Django rest framework, FastAPI -->
+<!-- TODO: httpx, flask, Django rest framework, ReadyAPI -->

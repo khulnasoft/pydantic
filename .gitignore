@@ -43,7 +43,7 @@ run_mypy_on_file.py
 # Project-specific files
 pydantic/*.c
 pydantic/*.so
-/fastapi/
+/readyapi/
 .mypy-configs/
 
 # Other files and folders

@@ -47,7 +47,7 @@ def create_data_models() -> list[Any]:
     return [*models, *models_with_nested]
 
 
-def test_fastapi_startup_perf(benchmark: Any):
+def test_readyapi_startup_perf(benchmark: Any):
     data_models = create_data_models()
     # API models for reading / writing the different data models
     T = TypeVar('T')
@@ -108,10 +108,10 @@ def test_fastapi_startup_perf(benchmark: Any):
             for data_model in data_models:
                 concrete_api_model = outer_api_model[
                     data_model
-                ]  # Would be used eg as request or response body in FastAPI
+                ]  # Would be used eg as request or response body in ReadyAPI
                 concrete_api_models.append(concrete_api_model)
 
-                # Emulate FastAPI creating its TypeAdapters
+                # Emulate ReadyAPI creating its TypeAdapters
                 adapt = TypeAdapter(Annotated[concrete_api_model, FieldInfo(description='foo')])
                 adapters.append(adapt)
                 adapt = TypeAdapter(Annotated[concrete_api_model, FieldInfo(description='bar')])
@@ -124,7 +124,7 @@ def test_fastapi_startup_perf(benchmark: Any):
 
 
 if __name__ == '__main__':
-    # run with `uv run tests/benchmarks/test_fastapi_startup.py`
+    # run with `uv run tests/benchmarks/test_readyapi_startup.py`
     import cProfile
     import sys
     import time
@@ -134,12 +134,12 @@ if __name__ == '__main__':
     print(f'Python version: {sys.version}')
     if sys.argv[-1] == 'cProfile':
         cProfile.run(
-            'test_fastapi_startup_perf(lambda f: f())',
+            'test_readyapi_startup_perf(lambda f: f())',
             sort='tottime',
             filename=Path(__file__).name.strip('.py') + '.cprof',
         )
     else:
         start = time.perf_counter()
-        test_fastapi_startup_perf(lambda f: f())
+        test_readyapi_startup_perf(lambda f: f())
         end = time.perf_counter()
         print(f'Time taken: {end - start:.2f}s')

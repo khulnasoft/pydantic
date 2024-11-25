@@ -115,7 +115,7 @@ key = "jupyter"
 name = "Jupyter"
 description = """
 * The developers of the Jupyter notebook are using Pydantic [for subprojects](https://github.com/pydantic/pydantic/issues/773)
-* Through the FastAPI-based Jupyter server [Jupyverse](https://github.com/jupyter-server/jupyverse)
+* Through the ReadyAPI-based Jupyter server [Jupyverse](https://github.com/jupyter-server/jupyverse)
 * [FPS](https://github.com/jupyter-server/fps)'s configuration management.
 """
 
@@ -126,7 +126,7 @@ description = """
 * [DeepSpeed](https://github.com/microsoft/DeepSpeed) deep learning optimisation library uses Pydantic extensively
 * [Multiple repos](https://github.com/search?q=org%3Amicrosoft%20pydantic&type=code) in the `microsoft` GitHub org depend on Pydantic, in particular their
 * Pydantic is also [used](https://github.com/search?q=org%3AAzure%20pydantic&type=code) in the `Azure` GitHub org
-* [Comments](https://github.com/tiangolo/fastapi/pull/26) on GitHub show Microsoft engineers using Pydantic as part of Windows and Office
+* [Comments](https://github.com/khulnasoft/readyapi/pull/26) on GitHub show Microsoft engineers using Pydantic as part of Windows and Office
 """
 
 [[orgs]]
@@ -144,7 +144,7 @@ description = """
 [Multiple repos](https://github.com/search?q=org%3Anasa%20pydantic&type=code) in the `NASA`
 GitHub org depend on Pydantic.
 
-NASA are also using Pydantic via FastAPI in their JWST project to process images from the James Webb Space Telescope,
+NASA are also using Pydantic via ReadyAPI in their JWST project to process images from the James Webb Space Telescope,
 see [this tweet](https://twitter.com/benjamin_falk/status/1546947039363305472).
 """
 
@@ -203,7 +203,7 @@ name = "Red Hat"
 key = "revolut"
 name = "Revolut"
 description = """
-Anecdotally, all internal services at Revolut are built with FastAPI and therefore Pydantic.
+Anecdotally, all internal services at Revolut are built with ReadyAPI and therefore Pydantic.
 """
 
 [[orgs]]
